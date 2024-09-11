@@ -1,0 +1,123 @@
+const qBank = [
+    // Capitals
+    { id: 1, question: "What is the capital of Haryana?", options: ["Yamunanagar", "Panipat", "Gurgaon", "Chandigarh"], answer: "Chandigarh" },
+    { id: 2, question: "What is the capital of Punjab?", options: ["Patiala", "Ludhiana", "Amritsar", "Chandigarh"], answer: "Chandigarh" },
+    { id: 3, question: "What is the capital of India?", options: ["Delhi", "Mumbai", "Kolkata", "Chennai"], answer: "Delhi" },
+    { id: 4, question: "What is the capital of Uttarakhad?", options: ["Roorkee", "Haridwar", "Dehradun", "Nanital"], answer: "Dehradun" },
+    { id: 5, question: "What is the capital of Uttar Pradesh?", options: ["GB Nagar", "Lucknow", "Prayagraj", "Agra"], answer: "Lucknow" },
+    { id: 6, question: "What is the capital of France?", options: ["Marseille", "Lyon", "Paris", "Nice"], answer: "Paris" },
+    { id: 7, question: "What is the capital of Japan?", options: ["Osaka", "Tokyo", "Kyoto", "Hiroshima"], answer: "Tokyo" },
+    { id: 8, question: "What is the capital of Australia?", options: ["Sydney", "Melbourne", "Canberra", "Brisbane"], answer: "Canberra" },
+    { id: 9, question: "What is the capital of the USA?", options: ["New York", "Los Angeles", "Washington D.C.", "Chicago"], answer: "Washington D.C." },
+    { id: 10, question: "What is the capital of Germany?", options: ["Berlin", "Munich", "Frankfurt", "Hamburg"], answer: "Berlin" },
+
+    // Science
+    { id: 11, question: "What is the chemical symbol for water?", options: ["O2", "H2O", "CO2", "NaCl"], answer: "H2O" },
+    { id: 12, question: "What planet is known as the Red Planet?", options: ["Earth", "Jupiter", "Mars", "Venus"], answer: "Mars" },
+    { id: 13, question: "What is the powerhouse of the cell?", options: ["Nucleus", "Mitochondria", "Ribosome", "Golgi apparatus"], answer: "Mitochondria" },
+    { id: 14, question: "Which element has the atomic number 1?", options: ["Oxygen", "Helium", "Hydrogen", "Carbon"], answer: "Hydrogen" },
+    { id: 15, question: "What is the speed of light?", options: ["299,792,458 m/s", "150,000,000 m/s", "300,000 m/s", "1,000,000 m/s"], answer: "299,792,458 m/s" },
+    { id: 16, question: "What gas do plants absorb from the atmosphere?", options: ["Oxygen", "Nitrogen", "Carbon dioxide", "Hydrogen"], answer: "Carbon dioxide" },
+    { id: 17, question: "What is the hardest natural substance on Earth?", options: ["Iron", "Diamond", "Gold", "Granite"], answer: "Diamond" },
+    { id: 18, question: "What is the main gas found in the air we breathe?", options: ["Oxygen", "Hydrogen", "Nitrogen", "Carbon Dioxide"], answer: "Nitrogen" },
+    { id: 19, question: "What is the boiling point of water?", options: ["100°C", "50°C", "200°C", "150°C"], answer: "100°C" },
+    { id: 20, question: "Which planet is closest to the Sun?", options: ["Earth", "Mars", "Mercury", "Venus"], answer: "Mercury" },
+
+    // History
+    { id: 21, question: "Who was the first President of the United States?", options: ["Abraham Lincoln", "George Washington", "Thomas Jefferson", "John Adams"], answer: "George Washington" },
+    { id: 22, question: "Which war was fought between the North and South regions in the United States?", options: ["World War I", "World War II", "The Civil War", "Vietnam War"], answer: "The Civil War" },
+    { id: 23, question: "In which year did World War II end?", options: ["1945", "1939", "1941", "1950"], answer: "1945" },
+    { id: 24, question: "Who was the first man to step on the Moon?", options: ["Buzz Aldrin", "Yuri Gagarin", "Neil Armstrong", "Michael Collins"], answer: "Neil Armstrong" },
+    { id: 25, question: "Who was the last Emperor of Russia?", options: ["Ivan the Terrible", "Peter the Great", "Nicholas II", "Alexander III"], answer: "Nicholas II" },
+    { id: 26, question: "What was the name of the ship that sank after hitting an iceberg in 1912?", options: ["Lusitania", "Titanic", "Britannic", "Queen Mary"], answer: "Titanic" },
+    { id: 27, question: "Who discovered penicillin?", options: ["Marie Curie", "Alexander Fleming", "Louis Pasteur", "Isaac Newton"], answer: "Alexander Fleming" },
+    { id: 28, question: "In which year did India gain independence?", options: ["1948", "1947", "1950", "1930"], answer: "1947" },
+    { id: 29, question: "Which country was Adolf Hitler born in?", options: ["Germany", "Austria", "Switzerland", "Poland"], answer: "Austria" },
+    { id: 30, question: "Who was the British Prime Minister during World War II?", options: ["Winston Churchill", "Neville Chamberlain", "Margaret Thatcher", "David Lloyd George"], answer: "Winston Churchill" },
+
+    // General Knowledge
+    { id: 31, question: "How many continents are there on Earth?", options: ["5", "6", "7", "8"], answer: "7" },
+    { id: 32, question: "What is the largest ocean in the world?", options: ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"], answer: "Pacific Ocean" },
+    { id: 33, question: "Which country is the largest by area?", options: ["China", "USA", "Canada", "Russia"], answer: "Russia" },
+    { id: 34, question: "What is the tallest mountain in the world?", options: ["Mount Kilimanjaro", "Mount Everest", "K2", "Denali"], answer: "Mount Everest" },
+    { id: 35, question: "Which river is the longest in the world?", options: ["Nile", "Amazon", "Yangtze", "Mississippi"], answer: "Nile" },
+    { id: 36, question: "Which is the largest desert in the world?", options: ["Gobi", "Sahara", "Arabian", "Kalahari"], answer: "Sahara" },
+    { id: 37, question: "Which animal is known as the King of the Jungle?", options: ["Tiger", "Elephant", "Lion", "Leopard"], answer: "Lion" },
+    { id: 38, question: "Which is the smallest country in the world?", options: ["Monaco", "Malta", "Vatican City", "San Marino"], answer: "Vatican City" },
+    { id: 39, question: "What is the currency of Japan?", options: ["Yuan", "Won", "Yen", "Rupee"], answer: "Yen" },
+    { id: 40, question: "Which language has the most native speakers?", options: ["English", "Spanish", "Mandarin", "Hindi"], answer: "Mandarin" },
+
+    // Technology
+    { id: 41, question: "Who is the founder of Microsoft?", options: ["Steve Jobs", "Bill Gates", "Mark Zuckerberg", "Larry Page"], answer: "Bill Gates" },
+    { id: 42, question: "What does 'HTTP' stand for?", options: ["Hypertext Transfer Protocol", "Hypertext Transfer Platform", "High Transfer Text Protocol", "Hypertext Transfer Pathway"], answer: "Hypertext Transfer Protocol" },
+    { id: 43, question: "Which company developed the Android operating system?", options: ["Apple", "Microsoft", "Google", "IBM"], answer: "Google" },
+    { id: 44, question: "What is the most widely used programming language in web development?", options: ["Python", "Java", "JavaScript", "C++"], answer: "JavaScript" },
+    { id: 45, question: "In what year was the iPhone first released?", options: ["2005", "2007", "2010", "2012"], answer: "2007" },
+    { id: 46, question: "What is the term for the physical components of a computer?", options: ["Software", "Firmware", "Hardware", "Malware"], answer: "Hardware" },
+    { id: 47, question: "Which programming language is primarily used for Android app development?", options: ["Swift", "Java", "C#", "Kotlin"], answer: "Java" },
+    { id: 48, question: "What does 'RAM' stand for?", options: ["Random Access Memory", "Read Access Memory", "Ready Access Memory", "Run Access Memory"], answer: "Random Access Memory" },
+    { id: 49, question: "Who is the CEO of Tesla?", options: ["Jeff Bezos", "Elon Musk", "Tim Cook", "Sundar Pichai"], answer: "Elon Musk" },
+    { id: 50, question: "What is the name of Apple's desktop operating system?", options: ["Windows", "iOS", "Linux", "macOS"], answer: "macOS" },
+
+    // More Capitals
+    { id: 51, question: "What is the capital of Italy?", options: ["Venice", "Milan", "Florence", "Rome"], answer: "Rome" },
+    { id: 52, question: "What is the capital of Spain?", options: ["Barcelona", "Madrid", "Seville", "Valencia"], answer: "Madrid" },
+    { id: 53, question: "What is the capital of China?", options: ["Shanghai", "Beijing", "Hong Kong", "Shenzhen"], answer: "Beijing" },
+    { id: 54, question: "What is the capital of South Korea?", options: ["Seoul", "Busan", "Incheon", "Daegu"], answer: "Seoul" },
+    { id: 55, question: "What is the capital of Brazil?", options: ["Rio de Janeiro", "São Paulo", "Brasília", "Salvador"], answer: "Brasília" },
+    { id: 56, question: "What is the capital of Canada?", options: ["Toronto", "Vancouver", "Ottawa", "Montreal"], answer: "Ottawa" },
+    { id: 57, question: "What is the capital of Russia?", options: ["St. Petersburg", "Sochi", "Moscow", "Kazan"], answer: "Moscow" },
+    { id: 58, question: "What is the capital of Egypt?", options: ["Alexandria", "Giza", "Cairo", "Luxor"], answer: "Cairo" },
+    { id: 59, question: "What is the capital of Mexico?", options: ["Guadalajara", "Mexico City", "Monterrey", "Tijuana"], answer: "Mexico City" },
+    { id: 60, question: "What is the capital of Argentina?", options: ["Rosario", "Córdoba", "Buenos Aires", "Mendoza"], answer: "Buenos Aires" },
+
+    // Space and Astronomy
+    { id: 61, question: "Which planet has the most moons?", options: ["Earth", "Jupiter", "Saturn", "Mars"], answer: "Jupiter" },
+    { id: 62, question: "Which planet is known as the Earth's twin?", options: ["Mars", "Mercury", "Venus", "Neptune"], answer: "Venus" },
+    { id: 63, question: "What is the largest planet in our solar system?", options: ["Earth", "Saturn", "Jupiter", "Uranus"], answer: "Jupiter" },
+    { id: 64, question: "What is the smallest planet in our solar system?", options: ["Mars", "Mercury", "Venus", "Pluto"], answer: "Mercury" },
+    { id: 65, question: "Which planet is famous for its rings?", options: ["Earth", "Jupiter", "Neptune", "Saturn"], answer: "Saturn" },
+    { id: 66, question: "What is the name of the galaxy we live in?", options: ["Andromeda Galaxy", "Black Eye Galaxy", "Milky Way Galaxy", "Whirlpool Galaxy"], answer: "Milky Way Galaxy" },
+    { id: 67, question: "What is the closest star to Earth?", options: ["Proxima Centauri", "Sirius", "Alpha Centauri", "The Sun"], answer: "The Sun" },
+    { id: 68, question: "How many planets are in our solar system?", options: ["7", "8", "9", "10"], answer: "8" },
+    { id: 69, question: "What is the hottest planet in the solar system?", options: ["Mercury", "Mars", "Venus", "Earth"], answer: "Venus" },
+    { id: 70, question: "Who was the first person in space?", options: ["Neil Armstrong", "Buzz Aldrin", "Yuri Gagarin", "John Glenn"], answer: "Yuri Gagarin" },
+
+    // Geography
+    { id: 71, question: "Which country has the largest population?", options: ["India", "USA", "China", "Indonesia"], answer: "China" },
+    { id: 72, question: "What is the longest river in India?", options: ["Yamuna", "Ganges", "Godavari", "Brahmaputra"], answer: "Ganges" },
+    { id: 73, question: "What is the highest waterfall in the world?", options: ["Niagara Falls", "Angel Falls", "Victoria Falls", "Iguazu Falls"], answer: "Angel Falls" },
+    { id: 74, question: "Which desert is located in northern Africa?", options: ["Atacama", "Sahara", "Gobi", "Kalahari"], answer: "Sahara" },
+    { id: 75, question: "Which country is known as the Land of the Rising Sun?", options: ["South Korea", "India", "China", "Japan"], answer: "Japan" },
+    { id: 76, question: "Which continent is the Sahara Desert located on?", options: ["Asia", "Africa", "Europe", "South America"], answer: "Africa" },
+    { id: 77, question: "What is the longest mountain range in the world?", options: ["Rocky Mountains", "Andes", "Himalayas", "Alps"], answer: "Andes" },
+    { id: 78, question: "Which country is the smallest by area?", options: ["Malta", "Liechtenstein", "San Marino", "Vatican City"], answer: "Vatican City" },
+    { id: 79, question: "What is the largest island in the world?", options: ["Greenland", "New Guinea", "Borneo", "Madagascar"], answer: "Greenland" },
+    { id: 80, question: "Which country has the most time zones?", options: ["USA", "China", "Russia", "France"], answer: "France" },
+
+    // Sports
+    { id: 81, question: "Which country won the FIFA World Cup in 2018?", options: ["Brazil", "Germany", "Argentina", "France"], answer: "France" },
+    { id: 82, question: "Which country has won the most Olympic medals?", options: ["China", "Russia", "USA", "Germany"], answer: "USA" },
+    { id: 83, question: "Which sport is known as the 'king of sports'?", options: ["Cricket", "Tennis", "Football", "Basketball"], answer: "Football" },
+    { id: 84, question: "Who holds the record for the most goals scored in football?", options: ["Cristiano Ronaldo", "Lionel Messi", "Pele", "Diego Maradona"], answer: "Cristiano Ronaldo" },
+    { id: 85, question: "Which sport uses a shuttlecock?", options: ["Tennis", "Badminton", "Squash", "Table Tennis"], answer: "Badminton" },
+    { id: 86, question: "What is the highest governing body of football?", options: ["ICC", "FIFA", "NBA", "WTA"], answer: "FIFA" },
+    { id: 87, question: "Which country has won the most cricket World Cups?", options: ["India", "Australia", "West Indies", "Pakistan"], answer: "Australia" },
+    { id: 88, question: "What is the national sport of Japan?", options: ["Baseball", "Judo", "Sumo Wrestling", "Karate"], answer: "Sumo Wrestling" },
+    { id: 89, question: "Which country hosted the 2020 Olympic Games?", options: ["China", "Japan", "Brazil", "USA"], answer: "Japan" },
+    { id: 90, question: "Which player has won the most Grand Slam titles in tennis?", options: ["Serena Williams", "Roger Federer", "Rafael Nadal", "Novak Djokovic"], answer: "Novak Djokovic" },
+
+    // Literature and Arts
+    { id: 91, question: "Who wrote 'Hamlet'?", options: ["J.K. Rowling", "Charles Dickens", "William Shakespeare", "George Orwell"], answer: "William Shakespeare" },
+    { id: 92, question: "What is the famous painting by Leonardo da Vinci?", options: ["Starry Night", "Mona Lisa", "The Scream", "The Persistence of Memory"], answer: "Mona Lisa" },
+    { id: 93, question: "Who is the author of 'Pride and Prejudice'?", options: ["Emily Bronte", "Charles Dickens", "Jane Austen", "Charlotte Bronte"], answer: "Jane Austen" },
+    { id: 94, question: "Who painted 'The Starry Night'?", options: ["Vincent van Gogh", "Pablo Picasso", "Claude Monet", "Salvador Dalí"], answer: "Vincent van Gogh" },
+    { id: 95, question: "Who wrote 'The Catcher in the Rye'?", options: ["F. Scott Fitzgerald", "J.D. Salinger", "Ernest Hemingway", "Mark Twain"], answer: "J.D. Salinger" },
+    { id: 96, question: "What novel is 'Hogwarts' associated with?", options: ["The Lord of the Rings", "Harry Potter", "Percy Jackson", "Chronicles of Narnia"], answer: "Harry Potter" },
+    { id: 97, question: "Who wrote 'The Great Gatsby'?", options: ["Ernest Hemingway", "F. Scott Fitzgerald", "George Orwell", "Aldous Huxley"], answer: "F. Scott Fitzgerald" },
+    { id: 98, question: "Which artist is known for his Blue Period?", options: ["Vincent van Gogh", "Claude Monet", "Pablo Picasso", "Salvador Dalí"], answer: "Pablo Picasso" },
+    { id: 99, question: "Who is the author of 'The Lord of the Rings'?", options: ["George R.R. Martin", "J.R.R. Tolkien", "J.K. Rowling", "C.S. Lewis"], answer: "J.R.R. Tolkien" },
+    { id: 100, question: "Which novel begins with the line 'Call me Ishmael'?", options: ["Moby-Dick", "The Odyssey", "Great Expectations", "To Kill a Mockingbird"], answer: "Moby-Dick" },
+];
+
+export default qBank;
