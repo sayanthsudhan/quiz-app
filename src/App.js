@@ -37,7 +37,7 @@ class App extends Component {
     fetchQuestions = async () => {
         try {
             const response = await axios.get(
-                "https://opentdb.com/api.php?amount=15"
+                "https://opentdb.com/api.php?amount=15&category=9&difficulty=easy&type=multiple"
             );
             const formattedQuestions = response.data.results.map((question, index) => ({
                 id: index + 1,

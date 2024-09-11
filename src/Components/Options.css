@@ -1,0 +1,24 @@
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.option {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #40c6da9e;
+    transition: background-color 0.3s;
+}
+
+.option:hover {
+    background-color: #f6eb83b1;
+}
+
+.option.selected {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
